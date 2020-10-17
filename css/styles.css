@@ -2,6 +2,58 @@
     box-sizing: border-box;
   }
 
+body{
+    margin: 100;
+    padding: 0;
+    min-width: 320px;
+    background: #fff;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+    line-height: 1.4285em;
+    color: rgba(0,0,0,.87);
+    background-color: #cceeff;
+}
+
+.navbar{
+    display: flex;
+    list-style: none; /* removes bullets */
+    margin: 0; 
+    padding: 0;
+    background: #4c6ca0;
+    border-radius: 5px;
+    overflow: hidden;
+} 
+
+.navbar li {
+    padding: 14px 16px;
+    flex: 1;
+    justify-content: space-between;
+}
+
+.navbar a{
+    color: #f2f2f2;
+    text-align: center;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.container{
+    width: 1000px;
+    margin: 0 auto;
+}
+
 #center {
     text-align: center;
+}
+
+h1{
+    font-size: 50px;
+}
+
+h2 {
+    text-align: center;
+}
+
+.position {
+    font-size: 20px;
 }
