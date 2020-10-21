@@ -195,20 +195,20 @@ body{
 }
 
 h1{
-    font-size: 50px;
+    font-size: 40px;
 }
 
 h2 {
-    font-size: 40px;
+    font-size: 30px;
     text-align: center;
 }
 
 h3 {
-    font-size: 25px;
+    font-size: 20px;
 }
 
 p {
-    font-size: 22px;
+    font-size: 18px;
 }
 
 .position {
