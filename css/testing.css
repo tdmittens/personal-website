@@ -1,0 +1,41 @@
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #353535;
+    color: #f2f2f2;
+    box-shadow: rgba(3,8,20,0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem; /*https://www.youtube.com/watch?v=705XCEruZFs for ref later*/
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    transition: all 500ms;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.card:hover{
+    box-shadow: rgba(2,8,20,0.1) 0px 0.35rem 1.175rem, rgba(2, 8, 20, 0.08) 0px 0.175rem 0.5rem;
+}
+
+
+.headshot{
+    max-width: 100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.headshot h1 {
+    font-size: 2em;
+    font-weight: 300;
+    color: #373d46;
+}
+
+.headshot h3 {
+    font-weight: 300;
+    line-height: 1.8em;
+    color: #98a0ad;
+}

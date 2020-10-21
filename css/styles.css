@@ -2,48 +2,184 @@
     box-sizing: border-box;
   }
 
+.container{
+    /*width: 1000px;
+    margin: 0 auto;*/
+    display:grid;
+    width: 100%;
+    height: 100vh;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: 0.5fr 1fr 1fr 1fr;
+    grid-template-areas: 
+        "top-header top-header"
+        "about-me-card about-me-card"
+        "hobbies-card hobbies-card"
+        "experience-card experience-card";
+    gap: 0.7rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #353535;
+    color: #f2f2f2;
+    box-shadow: rgba(3,8,20,0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem; /*https://www.youtube.com/watch?v=705XCEruZFs for ref later*/
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    transition: all 500ms;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 body{
     margin: 100;
     padding: 0;
     min-width: 320px;
-    background: #fff;
+    background: linear-gradient(to right,
+    rgba(0,107,142,1),
+    rgba(75,89,230,1),
+    rgba(150,125,253,1));
+    /*background: #fff;*/
     font-family: 'Ubuntu', sans-serif;
     font-size: 20px;
     line-height: 1.4285em;
-    color: rgba(0,0,0,.87);
-    background-color: #cceeff;
+    color: #f2f2f2;
+    /*color: rgba(0,0,0,.87);*/
+    /*background-color: #cceeff;*/
+    padding: 20px 250px 20px
+}
+#headshot{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 8000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#top-header{
+    text-align: center;
+    grid-area: top-header;
+}
+
+#top-header h1 {
+    font-size: 5em;
+    font-weight: 300;
+}
+
+.links{
+    margin:0;
+    padding:0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 2em;
+}
+
+.links li{
+    list-style: none;
+    padding:0.5em 0 5em;
+}
+
+.links li a{
+    color: #f2f2f2;
+    font-weight: 700;
+    opacity: 0.6;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.links li a:hover{
+    opacity:1;
 }
 
 .navbar{
+    padding: 2em;
     display: flex;
     list-style: none; /* removes bullets */
-    margin: 0; 
-    padding: 0;
-    background: #4c6ca0;
-    border-radius: 5px;
+    margin: 0em 0em 0em; 
+    padding: ;
+    border-radius: 10px;
     overflow: hidden;
+    background:black;
 } 
 
 .navbar li {
-    padding: 14px 16px;
     flex: 1;
     justify-content: space-between;
 }
 
-.navbar a{
+.navbar li a{
+    padding: 2em 2em;
     color: #f2f2f2;
     text-align: center;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 2em;
+    font-weight: 1000;
+    opacity: 0.6;
 }
 
-.container{
-    width: 1000px;
-    margin: 0 auto;
+.navbar li a:hover{
+    opacity:1;
 }
 
-#center {
-    text-align: center;
+#about-me-card{
+    padding: 1em;
+    display: grid;
+    grid-area: about-me-card;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: 
+        "about-me about-me-side";
+    gap: 1rem;
+}
+
+#about-me{
+    grid-area: about-me;
+}
+
+#about-me-side{
+    grid-area: about-me-card;
+}
+
+#hobbies-card {
+    padding: 1em;
+    grid-area: hobbies-card;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: 
+        "hobbies hobbies-side";
+    gap: 1rem;
+}
+
+#hobbies{
+    grid-area: hobbies;
+}
+
+#hobbies-side{
+    grid-area: hobbies-side;
+}
+
+#experience-card {
+    padding: 1em;
+    grid-area: experience-card;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: 
+        "experience experience-side";
+    gap: 1rem;
+}
+
+#experience{
+    grid-area: experience;
+}
+
+#experience-side{
+    grid-area: experience-side;
 }
 
 h1{
@@ -57,3 +193,5 @@ h2 {
 .position {
     font-size: 20px;
 }
+
+
