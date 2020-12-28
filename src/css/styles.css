@@ -15,7 +15,7 @@
     grid-template-areas: 
         "top-header top-header top-header top-header top-header"
         ". about-me about-me about-me ."
-        ". hobbies skillset experience ."
+        ". skillset experience hobbies ."
         "footer footer footer footer footer";
     grid-gap: 1rem;
 }
@@ -154,10 +154,6 @@ body{
     line-height: 1.5;
 }
 
-.text span {
-    text-align: justify;
-}
-
 #about-me{
     grid-area: about-me;
     line-height: 1.5;
@@ -198,6 +194,11 @@ h4{
     font-size: 18px;
 }
 
+ul,li{
+    margin-top: 0;
+    padding-left: 1em;
+}
+
 @media only screen and (max-width: 1000px) {
     *{
         font-size: 3vw;
@@ -208,9 +209,9 @@ h4{
         grid-template-areas: 
             "top-header top-header top-header"
             ". about-me ." 
-            ". hobbies ." 
             ". skillset ."
             ". experience ."
+            ". hobbies ." 
             "footer footer footer";   
     }
     #top-header h1 {
