@@ -5,27 +5,48 @@
 .container{
     /*width: 1000px;
     margin: 0 auto;*/
+
+    /*https://www.youtube.com/watch?v=68O6eOGAGqA for ref*/
     display:grid;
     width: 100%;
     height: 100vh;
-    grid-template-columns: 1.5fr 1fr;
+    grid-template-columns: 0.5fr 3fr;
     grid-template-rows: 0.5fr 1fr 1fr 1fr;
     grid-template-areas: 
         "top-header top-header"
-        "about-me-card about-me-card"
-        "hobbies-card hobbies-card"
-        "experience-card experience-card";
-    gap: 0.7rem;
+        "about-me-header about-me"
+        "hobbies-header hobbies"
+        "experience-header experience ";
+    grid-gap: 0.7rem;
+    padding: 2%
 }
 
-.card {
+body{
+    margin: 100;
+    padding: 0;
+    min-width: 320px;
+    /*background: linear-gradient(to right,
+    rgba(0,107,142,1),
+    rgba(75,89,230,1),
+    rgba(150,125,253,1));*/
+    background: #32213A;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+    line-height: 1.4285em;
+    color: #f2f2f2;
+    /*color: rgba(0,0,0,.87);*/
+    /*background-color: #cceeff;*/
+    /*padding: 20px 250px 20px*/
+}
+/*
+#card {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #353535;
-    color: #f2f2f2;
-    box-shadow: rgba(3,8,20,0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem; /*https://www.youtube.com/watch?v=705XCEruZFs for ref later*/
+    background-color: #E3D8E9;
+    color: black;
+    box-shadow: rgba(3,8,20,0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem; /*https://www.youtube.com/watch?v=705XCEruZFs for ref later
     height: 100%;
     width: 100%;
     border-radius: 10px;
@@ -33,25 +54,9 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-}
+    padding: 5%;
+}*/
 
-body{
-    margin: 100;
-    padding: 0;
-    min-width: 320px;
-    background: linear-gradient(to right,
-    rgba(0,107,142,1),
-    rgba(75,89,230,1),
-    rgba(150,125,253,1));
-    /*background: #fff;*/
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 20px;
-    line-height: 1.4285em;
-    color: #f2f2f2;
-    /*color: rgba(0,0,0,.87);*/
-    /*background-color: #cceeff;*/
-    padding: 20px 250px 20px
-}
 #headshot{
     display: block;
     margin-left: auto;
@@ -68,8 +73,8 @@ body{
 }
 
 #top-header h1 {
-    font-size: 5em;
-    font-weight: 300;
+    font-size: 4vw;
+    color: #E3D8E9;
 }
 
 .links{
@@ -78,17 +83,17 @@ body{
     display: flex;
     justify-content: center;
     text-align: center;
-    gap: 2em;
+    gap: 8%;
 }
 
 .links li{
     list-style: none;
-    padding:0.5em 0 5em;
+    padding:0.5em 0;
 }
 
 .links li a{
-    color: #f2f2f2;
-    font-weight: 700;
+    color: #E3D8E9;
+    font-size: 2vw;
     opacity: 0.6;
     text-decoration: none;
     transition: 0.3s;
@@ -97,13 +102,12 @@ body{
 .links li a:hover{
     opacity:1;
 }
-
+/*
 .navbar{
     padding: 2em;
     display: flex;
-    list-style: none; /* removes bullets */
+    list-style: none; 
     margin: 0em 0em 0em; 
-    padding: ;
     border-radius: 10px;
     overflow: hidden;
     background:black;
@@ -127,16 +131,7 @@ body{
 .navbar li a:hover{
     opacity:1;
 }
-
-#about-me-card{
-    padding: 1em;
-    display: grid;
-    grid-area: about-me-card;
-    grid-template-columns: 0.5fr 2fr 1fr;
-    grid-template-areas: 
-        "about-me-header about-me about-me-side";
-    gap: 1rem;
-}
+*/
 
 #about-me-header{
     grid-area:about-me-header;
@@ -146,52 +141,20 @@ body{
     grid-area: about-me;
 }
 
-#about-me-side{
-    grid-area: about-me-card;
-}
-
-#hobbies-card {
-    padding: 1em;
-    grid-area: hobbies-card;
-    display: grid;
-    grid-template-columns: 0.5fr 2fr 1fr;
-    grid-template-areas: 
-        "hobbies-header hobbies hobbies-side";
-    gap: 1rem;
-}
-
 #hobbies-header{
-    grid-area:hobbies-header;
+    grid-area: hobbies-header;
 }
 
 #hobbies{
     grid-area: hobbies;
 }
 
-#hobbies-side{
-    grid-area: hobbies-side;
-}
-
-#experience-card {
-    padding: 1em;
-    grid-area: experience-card;
-    display: grid;
-    grid-template-columns: 0.5fr 2fr 1fr;
-    grid-template-areas: 
-        "experience-header experience experience-side";
-    gap: 1rem;
-}
-
 #experience-header{
-    grid-area:experience-header;
+    grid-area: experience-header;
 }
 
 #experience{
     grid-area: experience;
-}
-
-#experience-side{
-    grid-area: experience-side;
 }
 
 h1{
@@ -215,4 +178,26 @@ p {
     font-size: 20px;
 }
 
-
+@media only screen and (max-width: 770px) {
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr 0.5fr 2fr 1fr 0.5fr 2fr 1fr 0.5fr 2fr 1fr;
+        grid-template-areas: 
+            "top-header"
+            "about-me-header"
+            "about-me" 
+            "about-me-side"
+            "hobbies-header" 
+            "hobbies" 
+            "hobbies-side"
+            "experience-header"
+            "experience"
+            "experience-side";   
+    }
+    #top-header h1 {
+        font-size: 8vw;
+    }
+    .links li a{
+        font-size: 4vw;
+    }
+}
